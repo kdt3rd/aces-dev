@@ -1,0 +1,5 @@
+
+INCLUDE_DIRECTORIES( ${ACES_INCLUDE_DIR} )
+
+ADD_EXECUTABLE( acesinfo main.c )
+TARGET_LINK_LIBRARIES( acesinfo aces )
