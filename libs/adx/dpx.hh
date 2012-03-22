@@ -616,7 +616,7 @@ struct dpx {
 		static std::string descriptor_to_string(uint8_t id);
 };
 
-#include <dpx.tcc>
+#include "dpx.tcc"
 
 }
 
