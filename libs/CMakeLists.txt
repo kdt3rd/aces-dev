@@ -1,0 +1,5 @@
+
+ADD_SUBDIRECTORY( aces )
+#ADD_SUBDIRECTORY( adx )
+#ADD_SUBDIRECTORY( ctl )
+#ADD_SUBDIRECTORY( openexr-ctl )
