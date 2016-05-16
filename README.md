@@ -1,74 +1,84 @@
 ## Academy Color Encoding System Developer Resources ##
 
 The Academy Color Encoding System (ACES) is a set of components that facilitates
-a wide range of motion picture workflows while eliminating the ambiguity of
-today's file formats. The framework is designed to support both all digital and
+a wide range of motion picture and television workflows while eliminating the ambiguity of
+legacy file formats. The system is designed to support both all-digital and
 hybrid film-digital motion picture workflows.
 
 The basic ACES components are:
 
 * Color encoding and metric specifications, file format specifications, color
-transformations, and an open source reference implementation. 
+transformations, and an open source reference implementation 
 * A set of reference images and calibration targets for film scanners and
 recorders 
-* Documentation on the architecture and software tools
+* Documentation on the system and software tools
 
 This toolkit is intended to serve as a distribution mechanism for key components
-of the framework including the reference implementation transforms, reference
+of the system, including the reference implementation transforms, reference
 images, and documentation.
 
 ### Package Contents ###
  
-* [`documents/`](./documents) - ACES related documents 
+* [`documents/`](./documents) – ACES-related documents 
 * [`images/`](./images) - "golden" images created using the reference implementation transforms
 * [`transforms/`](./transforms) - ACES reference implementation transforms
 
-### Changes from Previous Releases ###
+### Changes from Previous Release ###
 
-**v0.7**
-*  Updates forward and inverse RRT
-*  Updates forward and inverse ODTs
-*  Updates the ARRI Alexa and Sony IDTs
-*  Fixes a typo in the ACES-to-ACESproxy10 transform
+Though the "master" branch is 1.0.2, the current major version of ACES remains 1.0. The 1.0.2 
+"patch" release does not add features, change the look, or modify the core transforms 
+beyond addressing reported bugs since the Major version release. 
 
-**v0.7.1**
-* Bug fixes
+As always, you should check the hotfixes and dev branches for the latest bug fixes and 
+new features that will ultimately be rolled into a future version of ACES. These 
+improvements will continue to be staged on the dev branch for testing as they become 
+available.
 
-For a detailed list of changes see the [CHANGELOG](./CHANGELOG.md).
+Included in ACES 1.0.2:
+  * Added Missing chromatic adaptation transform in Rec2020 1000-nit InvODT
+  * Fixed ACEStransformID references in DolbyPQ utility CTLs
+  * Fixed lingering ST2048 references
+  * Fixed type in file names in images/README
+  * Fixed file names in images README
+  * Various minor typographical and stylistic fixes
+  * Renamed all references to ST2084 from ST2048
+  * Tabs => spaces and blank space cleanup      
+  * Update README and CHANGELOG
+
+For a more detailed list of changes see the [CHANGELOG](./CHANGELOG.md) and in the [commit history](https://github.com/ampas/aces-dev/commits/master).
 
 ### Versioning ###
  
 The links to the current and all past versions of the ACES Developer Resources
 can be found at [https://github.com/ampas/aces-dev/releases](https://github.com/ampas/aces-dev/releases).  
 
-Source code is version controlled using the [git version control system](http://git-scm.com/) and hosted on Github at [https://github.com/ampas/aces-dev/](https://github.com/ampas/aces-dev/).
+Source code is version controlled using the [git version control system](http://git-scm.com/) and hosted on GitHub at [https://github.com/ampas/aces-dev/](https://github.com/ampas/aces-dev/).
+
+Individual files now conform to the ACES System Versioning Specification.  Details can be found in the Academy Specification "S-2014-002 - Academy Color Encoding System - Versioning System" included in [`documents/`](./documents)
 
 ### Branch Structure ###
 
 __Master Branch__
  
 The current release version of ACES can always be found at the HEAD of the
-master branch.  Previous release versions are tagged and are also commits on the
-master.  The master branch contains no intermediate commits so all commits on
-the master branch are tagged and represent a release of ACES.
+master branch.  The master branch contains no intermediate commits and all commits on
+the master branch are tagged to represent a release of ACES.
 
 __Dev Branch__
  
-All commits between releases will be on the dev branch. Commits on the dev
-branch will be included in the next release version. Commits staged on the dev
-branch, but not yet merged into the master, should be considered non-critical. 
-All intermediate commits for a release will be staged on the dev branch before
-being merged into the master and tagged.
+Intermediate commits between releases will be staged on the dev branch.  Commits staged 
+on the dev branch, but not yet merged into the master, should be considered as "planned 
+for inclusion" in the next release version.  Commits on the dev branch will ultimately 
+be merged into the master branch as part of a future release.
 
 __Hotfixes Branch__
- 
-In some cases it may be necessary to create a hotfixes branch.  The hotfixes
+
+In some instances it may be necessary to create a hotfixes branch.  The hotfixes
 branch will include important, but not fully tested, fixes for bugs found in a
-particular release.
-Hotfixes should only be implemented by developers if the bug they are intended
-to correct is encountered in the course of production and is deemed to be a
-barrier to using a particular ACES release.  Hotfixes, once fully tested, will
-be merged into dev branch, and ultimately the master.    
+particular release.  Hotfixes should only be implemented by developers if the bug they 
+are intending to correct is encountered in the course of production and is deemed to be 
+a barrier to using a particular ACES release.  Hotfixes, once fully tested, will
+be merged into the dev branch, and ultimately the master.
 
 ## Prerequisites ##
 
@@ -84,7 +94,7 @@ Academy under the following terms and conditions: A worldwide, royalty-free,
 non-exclusive right to copy, modify, create derivatives, and use, in source and
 binary forms, is hereby granted, subject to acceptance of this license.
 
-Copyright © 2013 Academy of Motion Picture Arts and Sciences (A.M.P.A.S.).
+Copyright 2015 Academy of Motion Picture Arts and Sciences (A.M.P.A.S.).
 Portions contributed by others as indicated. All rights reserved.
 
 Performance of any of the aforementioned acts indicates acceptance to be bound
